@@ -1,7 +1,6 @@
-# TODO
 import pandas as pd
-from thefuzz import fuzz
-from thefuzz import process
+from rapidfuzz import fuzz
+from rapidfuzz import process
 
 df = pd.read_csv('all_product_prices.csv')
 df = df.drop_duplicates()
@@ -11,7 +10,6 @@ product_names = df['product']
 prod_list = product_names.to_list()
 
 #print(type(product_names))
-
 search_term = input("What product do you want to buy?\n")
 #search_term = search.lower()
 
